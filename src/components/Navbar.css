@@ -2,8 +2,9 @@
 
 .navbar {
     /* display: inline; */
-    /* position: relative; */
-    /* top: -4rem; */
+    position: relative;
+    top: -4rem;
+    min-width: 1400px;
 }
 
 
