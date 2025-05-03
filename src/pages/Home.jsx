@@ -1,6 +1,6 @@
 import React from 'react'
 import homecontentleft from '../assets/homecontentleft.png'
-import jewellerynecklace from '../assets/jewellerynecklace.png'
+import jewellerynecklace from '../assets/jewellerynecklace2.png'
 import jewellerywomen from '../assets/jewellerywomen.png'
 
 import '../pages/Home.css'
