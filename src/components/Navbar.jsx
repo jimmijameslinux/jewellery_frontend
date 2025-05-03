@@ -1,16 +1,36 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../components/Navbar.css'
 
 const Navbar = ({ isOpen }) => {
   return (
     <nav className={`navbar ${isOpen ? 'open' : ''}`}>
       <ul className="nav-menu">
-        <li><Link to="/" className="nav-links">HOME</Link></li>
-        <li><Link to="/about" className="nav-links">ABOUT US</Link></li>
-        <li><Link to="/ourcollection" className="nav-links">OUR COLLECTION</Link></li>
-        <li><Link to="/gallery" className="nav-links">GALLERY</Link></li>
-        <li><Link to="/contact" className="nav-links">CONTACT US</Link></li>
+        <li>
+          <NavLink to="/" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
+            HOME
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
+            ABOUT US
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/ourcollection" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
+            OUR COLLECTION
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/gallery" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
+            GALLERY
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
+            CONTACT US
+          </NavLink>
+        </li>
       </ul>
     </nav>
   )
