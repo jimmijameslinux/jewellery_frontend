@@ -1,32 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 
 .navbar {
-    /* display: inline; */
-    position: relative;
-    top: -4rem;
-    min-width: 1400px;
+  /* width: 100%; */
+  padding: 1rem 2rem;
+  background-color: transparent; /* optional */
 }
 
-
-
-
-.nav-menu {
+.navbar {
     display: flex;
     justify-content: center;
-    align-items: center;
-    column-gap: 5rem;
-    margin-left: 1rem;
+  }
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-menu a {
-    text-decoration: none;
-    font-family: 'Inknut Antiqua', serif;
-    /* font-size: 0.9em; */
-    font-weight: 600;
-    background-image: url('../assets/filltext.jpg');
-    background-size: cover;
-    background-position: top;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-links {
+  text-decoration: none;
+  font-family: 'Inknut Antiqua', serif;
+  font-weight: 600;
+  background-image: url('../assets/filltext.jpg');
+  background-size: cover;
+  background-position: top;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-links:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0;
+        background-color: #0B3C2F; /* optional */
+    }
+  .nav-menu {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nav-links {
+    font-size: 1.2rem;
+  }
+
+  /*  */
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: white;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar.open {
+    display: block;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  .nav-links {
+    color: black;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+  }
 }
