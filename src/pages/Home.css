@@ -157,7 +157,12 @@ h1,p{
         align-items: center;
     }
 } */
-
+.clipped-shape{
+    width: 300px;
+  height: 200px;
+  background-color: teal;
+    clip-path: path('M 0% 50% C 0% 100%, 20% 100%, 40% 100% C 60% 100%, 70% 70%, 100% 70% L 100% 30% C 70% 30%, 60% 0%, 40% 0% C 20% 0%, 0% 0%, 0% 50% Z');
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {

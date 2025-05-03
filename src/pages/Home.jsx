@@ -31,6 +31,9 @@ const Home = () => {
         <img src={jewellerywomen} alt="jewellerywomen" className="img-women" />
         <img src={jewellerynecklace} alt="jewellerynecklace" className="img-necklace" />
       </div>
+      <div className="clipped-shape">
+        
+      </div>
     </div>
   )
 }
