@@ -5,6 +5,7 @@ import jewellerywomen from '../assets/jewellerywomen.png'
 
 import '../pages/Home.css'
 import Trending from '../components/Trending'
+import Collection from '../components/Collection'
 
 const Home = () => {
   return (
@@ -38,6 +39,7 @@ const Home = () => {
       </div> */}
       </div>
       <Trending />
+      <Collection />
     </>
   )
 }
