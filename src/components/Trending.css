@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+
+p,h3{
+    margin: 0;
+}
+.trending {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    background-color: #F6F1EB;
+    border-radius: 50px;
+    color: #0B3C2F;
+    margin-top: 2rem;
+    position: relative;
+    /* flex-direction: column; */
+}
+
+/* .trending::before {
+    content: "";
+    position: absolute;
+    left: -5rem;
+    top: -0.91rem;
+    display: block;
+    width: 20%;
+    height: 124%;
+    background-image:
+        url('data:image/svg+xml;utf8,<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><path d="M 10 300,Q 100 180 150 20,Q 200 180 290 300,Z" fill="%23F6F1EB"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.trending::after {
+    content: "";
+    position: absolute;
+    right: -5rem;
+    top: -0.91rem;
+    display: block;
+    width: 20%;
+    height: 124%;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><path d="M 10 150,Q 100 90 150 10,Q 200 90 290 150,Z" fill="%23F6F1EB"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transform: rotate(180deg);
+} */
+
+.trendingitems {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+}
+
+.trendingitem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* width: 30%; */
+    font-family: 'Inder', sans-serif;
+}
+
+.trendingitem h3 {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: -0.8rem;
+}
+
+.trendingitem p{
+    color: #ABABAB;
+}
+
+.crossedprice {
+    text-decoration: line-through;
+    color:#838383;
+}
+
+.itemimage {
+    width: 243px;
+    height: 243px;
+    position: relative;
+    overflow: hidden;
+    border: 15px solid transparent;
+    border-image-source: url(/src/assets/jewelleryborderimg.png);
+    border-image-slice: 10% fill;
+    border-image-width: 20px;
+    border-image-outset: 0;
+    border-image-repeat: round;
+}
+
+.itemimage img {
+    width: 100%;
+    height: 100%;
+    background-color: #F6F1EB;
+    object-fit: cover;
+
+}
+
+.ratingwithstars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 1rem; */
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    margin-bottom: 1rem;
+    /* margin-top: 1rem; */
+}
+
+.addtocartbtn {
+    padding: 1rem;
+    padding-inline: 3rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F6F1EB;
+    font-family: 'Playfair', serif;
+    font-size: 2rem;
+    color: #0B3C2F;
+    line-height: 100%;
+    font-weight: 400;
+    cursor: pointer;
+    font-family:'Playfair', serif;
+}
