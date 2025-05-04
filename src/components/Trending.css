@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 
-p,h3{
+p,
+h3 {
     margin: 0;
 }
 
-.tradingtop{
+.trendingtop {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +18,7 @@ p,h3{
     margin-top: 10rem;
     row-gap: 2rem;
 }
+
 .trending {
     display: flex;
     justify-content: space-evenly;
@@ -26,8 +29,10 @@ p,h3{
     color: #0B3C2F;
     margin-top: 2rem;
     position: relative;
+    width: 94.5%;
     /* flex-direction: column; */
 }
+
 /* .trending::before {
     content: "";
     position: absolute;
@@ -85,13 +90,13 @@ p,h3{
     margin-bottom: -0.8rem;
 }
 
-.trendingitem p{
+.trendingitem p {
     color: #ABABAB;
 }
 
 .crossedprice {
     text-decoration: line-through;
-    color:#838383;
+    color: #838383;
 }
 
 .itemimage {
@@ -143,8 +148,112 @@ p,h3{
     line-height: 100%;
     font-weight: 400;
     cursor: pointer;
-    font-family:'Playfair', serif;
+    font-family: 'Playfair', serif;
 }
+
+.trendinghorimg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* left: 40%; */
+}
+
+.artcombined {
+    position: absolute;
+    left: 43%;
+    display: flex;
+    flex-direction: column-reverse;
+    object-fit: contain;
+    /* top: -3.6rem; */
+}
+
+.trendinghor {
+    color: #CECECE;
+    width: 99%;
+}
+
+.indianarttraditional {
+    position: relative;
+    top: 0;
+    width: 13vw;
+    rotate: 180deg;
+}
+
+.indianarttraditional2 {
+    position: relative;
+    bottom: 0;
+    width: 13vw;
+}
+
+.jewelimgpromises{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+.promises{
+    display: flex;
+    flex-direction: column;
+}
+
+.littlepromises{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.jewelimg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.jewelimg img{
+    width: 40%;
+}
+
+.jewelimg p{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    /* 28px = 1.75rem */
+    font-size: 1.75rem;
+    letter-spacing: 14%;
+    text-align: center;
+}
+
+h4{
+    font-weight: 400;
+    font-size: 2.5rem;
+    /* letter-spacing: 14%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.span1{
+    font-family: 'Playfair Display', serif;
+}
+
+.span2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* text color linear gradient */
+    background: linear-gradient(to right, #D9B47F, #B6813B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+/* ////////////////////////////////////////////////////////////// */
 
 /* Mobile: tighter spacing for better layout on small screens */
 @media (max-width: 600px) {
@@ -159,6 +268,11 @@ p,h3{
     .price {
         column-gap: 1rem;
     }
+    
+.jewelimgpromises{
+    flex-wrap: wrap;
+}
+    
 }
 
 /* Tablet: slightly reduce font sizes for balance */
@@ -167,9 +281,9 @@ p,h3{
         font-size: 1.1rem;
     }
 
-    .tradingtop {
+    .trendingtop {
         /* height: auto; */
-        margin-top: 2rem;
+        /* margin-top: 2rem; */
         /* padding: 1rem; */
         /* row-gap: 1rem; */
     }
@@ -180,6 +294,29 @@ p,h3{
 
     .price {
         column-gap: 1.5rem;
+    }
+
+    /* //////////////////////////// */
+    .trendingitems {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .trendingitem {
+        scroll-snap-align: start;
+        flex: 0 0 auto;
+    }
+
+    .trendingtop {
+        height: auto;
+        margin-top: 0rem;
+        padding: 1rem;
+        row-gap: 1rem;
+    }
+
+    .jewelimgpromises{
+        flex-wrap: wrap;
     }
 }
 
@@ -196,10 +333,29 @@ p,h3{
         flex: 0 0 auto;
     }
 
-    .tradingtop {
+    .trendingtop {
         height: auto;
         margin-top: 0rem;
         padding: 1rem;
         row-gap: 1rem;
+    }
+}
+
+/* Desktop: larger font sizes for better readability */
+@media (min-width: 1125px) {
+    .trendingitem h3 {
+        font-size: 1.2rem;
+    }
+
+    .trendingtop {
+        margin-top: 4rem;
+    }
+
+    .trendingitem p {
+        font-size: 1rem;
+    }
+
+    .price {
+        column-gap: 2rem;
     }
 }
