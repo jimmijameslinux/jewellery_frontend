@@ -5,7 +5,7 @@ import radiantjewellery from '../assets/radiantjewellery.png'
 
 const Trending = () => {
     return (
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh",flexDirection: "column",marginTop:"10rem",rowGap:"2rem" }}>
+        <div className='tradingtop' style={{  }}>
             {/* <svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
                 <path d="
                             M 10 150
