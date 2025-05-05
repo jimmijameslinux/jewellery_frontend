@@ -22,13 +22,17 @@ const Collection = () => {
             <div className="imgcontainer">
                 <div className="left">
                     <img src={swarnaleela} alt="" />
+                    <p>SwarnaLeela</p>
                 </div>
                 <div className="right">
                     <div className="top">
                         <img src={navya} alt="" />
+                        <p>Necklace of Navya</p>
+
                     </div>
                     <div className="bottom">
                         <img src={celestia} alt="" />
+                        <p>Celestia</p>
                     </div>
                 </div>
             </div>
