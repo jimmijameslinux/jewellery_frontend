@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
 .footer {
     background-color: #ECECEC;
     padding: 1rem;
@@ -7,18 +9,135 @@
     margin-inline: 2rem;
     color: #0B3C2F;
     margin-bottom: 1rem;
+    align-items: center;
+    /* justify-content: space-around; */
+    column-gap: 2rem;
+    row-gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footerleftcontent {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    position: relative;
+    width: 30%;
+}
+
+.footerleftcontent img {
+    width: 100%;
+    height: auto;
+    max-width: 20rem;
+    margin-bottom: 1rem;
 }
 
 .address {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.5rem;
+}
+
+.address img{
+    width: 32px;
+    height: 32px;
 }
 
 .location,.email,.phone{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 2rem;
+    font-family: 'Playfair', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.location{
+    flex-wrap: nowrap;
+    text-align: left;
+}
+
+.footerrightcontent {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* position: relative;
+    width: 79%; */
+}
+
+.categoryandlink,.usefulinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem; */
+}
+
+.ourcategories,.usefulinks{
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 1rem; */
+}
+
+.categoryandlink h3{
+    width: 75%;
+    border-bottom: 2px solid #0B3C2F;
+    font-family: 'Playfair', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.categoryandlink ul{
+    list-style-image: url("../assets/jewellring.png");
+    font-family: 'Playfair', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.copyright p{
+    font-family: 'Playfair', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-top: 2rem; */
+}
+
+/* media query img */
+@media (max-width: 1024px) {
+
+    .footerleftcontent{
+        padding: 2rem;
+    }
+    .footerleftcontent > img {
+        width: 200%;
+        height: auto;
+        max-width: 20rem;
+        margin-bottom: 1rem;
+    }
+
+    .location{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    /* .footerleftcontent {
+        width: 100%;
+    }
+    .footerrightcontent {
+        width: 100%;
+    }
+    .categoryandlink h3{
+        width: 100%;
+    } */
 }
