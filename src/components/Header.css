@@ -59,6 +59,41 @@
     top: 1rem; */
     z-index: 10;
   }
+
+  /* header animation */
+
+  @keyframes fadeInSlide {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .header {
+    animation: fadeInSlide 1s ease-in-out;
+  }
+
+  .logo {
+    animation: zoomIn 1s ease-out 0.5s forwards;
+    opacity: 0;
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Responsiveness */
   
   @media (max-width: 768px) {
 

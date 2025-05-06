@@ -163,6 +163,79 @@ h1,p{
     clip-path: path('M 0% 50% C 0% 100%, 20% 100%, 40% 100% C 60% 100%, 70% 70%, 100% 70% L 100% 30% C 70% 30%, 60% 0%, 40% 0% C 20% 0%, 0% 0%, 0% 50% Z');
 }
 
+
+/* hoem animation */
+.home {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    animation: fadeInPage 1s ease-in-out;
+  }
+  
+  /* Left content animation */
+  .homecontentleft h1, 
+  .homecontentleft p, 
+  .homecontentleft .btns {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 1s forwards;
+  }
+  
+  .homecontentleft h1 {
+    animation-delay: 0.3s;
+  }
+  
+  .homecontentleft p {
+    animation-delay: 0.6s;
+  }
+  
+  .homecontentleft .btns {
+    animation-delay: 0.9s;
+  }
+  
+  /* Image fade and scale */
+  .homecontentleftimage img,
+  .homecontentrightimage img {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeScaleIn 1s forwards;
+  }
+  
+  .homecontentleftimage img {
+    animation-delay: 1.2s;
+  }
+  
+  .img-women {
+    animation-delay: 1.4s;
+  }
+  
+  .img-necklace {
+    animation-delay: 1.6s;
+  }
+  
+  /* Keyframes */
+  @keyframes slideInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeScaleIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInPage {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 /* Responsive Styles */
 @media (max-width: 768px) {
     .home {

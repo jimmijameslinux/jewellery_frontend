@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import lineart from '../assets/lineart.png'
 import '../components/Trending.css'
 import radiantjewellery from '../assets/radiantjewellery.png'
@@ -13,6 +13,26 @@ import rupee from '../assets/rupee.png'
 import invest from '../assets/invest.png'
 
 const Trending = () => {
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target); // Animate once
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const items = document.querySelectorAll('.trending,.trendingitem,.trendinghorimg, .jewelimgpromises');
+        items.forEach(item => observer.observe(item));
+
+        return () => {
+            items.forEach(item => observer.unobserve(item));
+        };
+    }, []);
+
+
     return (
         <>
             <div className='trendingtop'>
