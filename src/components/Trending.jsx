@@ -16,21 +16,24 @@ const Trending = () => {
     return (
         <>
             <div className='trendingtop'>
-                {/* <svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
-                <path d="
-                            M 10 150
-                            Q 100 90 150 10
-                            Q 200 90 290 150
-                            Z"
-                    fill="#F6F1EB"/>
-            </svg> */}
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 2000 2000"><g><g fill="hsl(0, 0%, 100%)" id="star"><path d="M 356.8435745013621 995.8100590440629 C 1000 1000 1000 1000 1014.6647460394051 143.85476162437828 C 1000 1000 1000 1000 1538.4078214752444 1000.6983208218242 C 1000 1000 1000 1000 999.3016791781756 1004.1899409559371 C 1000 1000 1000 1000 356.8435745013621 995.8100590440629" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg>
-
                 <div className="trending">
+                    <svg className='tri' width="300" height="300" viewBox="0 -80 300 300" xmlns="http://www.w3.org/2000/svg">
+                        <path d="
+                        M 10 190
+                        Q 100 140 150 -60
+                        Q 200 140 290 190
+                        Z" fill="#F6F1EB" />
+                    </svg>
                     <img src={lineart} alt="Line Art" className="responsive-img line" />
                     <h1>TRENDING</h1>
                     <img src={lineart} alt="Line Art" className="responsive-img line" />
+                    <svg className='tri2' width="300" height="300" viewBox="0 -80 300 300" xmlns="http://www.w3.org/2000/svg">
+                    <path d="
+                        M 10 190
+                        Q 100 140 150 -60
+                        Q 200 140 290 190
+                        Z" fill="#F6F1EB" />
+                </svg>
                 </div>
                 <div className="trendingitems">
                     {/* 1 */}
@@ -138,12 +141,12 @@ const Trending = () => {
                 <div className="promises">
                     <h4>
                         <span className='span1'>
-                        Saubhagya 
+                            Saubhagya
                         </span>
                         <span className='span2'>
-                        Promises
+                            Promises
                         </span>
-                        </h4>
+                    </h4>
                     <div className="littlepromises">
                         <div className="prom">
                             <img src={certificate} alt="certificate" />

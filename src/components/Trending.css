@@ -17,6 +17,25 @@ h3 {
     flex-direction: column;
     margin-top: 10rem;
     row-gap: 2rem;
+    position: relative;
+}
+
+.tri {
+    position: absolute;
+    top: 0;
+    left: -11rem;
+    height: 100%;
+    rotate: -90deg;
+    z-index: -1;
+}
+
+.tri2 {
+    position: absolute;
+    top: 0;
+    right: -11rem;
+    height: 100%;
+    rotate: 90deg;
+    z-index: -1;
 }
 
 .trending {
@@ -29,7 +48,7 @@ h3 {
     color: #0B3C2F;
     margin-top: 2rem;
     position: relative;
-    width: 94.5%;
+    width: 84%;
     /* flex-direction: column; */
 }
 
@@ -264,7 +283,7 @@ h4 {
 
 }
 
-.promisehr{
+.promisehr {
     height: 25rem;
 }
 
@@ -288,11 +307,11 @@ h4 {
         flex-wrap: wrap;
     }
 
-    .promisehr{
+    .promisehr {
         display: none;
     }
 
-    .promises{
+    .promises {
         width: fit-content;
     }
 
@@ -342,11 +361,11 @@ h4 {
         flex-wrap: wrap;
     }
 
-    .promisehr{
+    .promisehr {
         display: none;
     }
 
-    .promises{
+    .promises {
         width: fit-content;
     }
 }
