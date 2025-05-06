@@ -164,11 +164,11 @@ h1,p{
 }
 
 
-/* hoem animation */
+/* home animation */
 .home {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    padding: 40px;
+    padding: 40px; */
     animation: fadeInPage 1s ease-in-out;
   }
   
