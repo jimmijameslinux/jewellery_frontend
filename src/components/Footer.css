@@ -105,6 +105,15 @@
     font-weight: 400;
 }
 
+.ourcategories ul li a, .categoryandlink ul li a{
+    text-decoration: none;
+    color: #0B3C2F;
+}
+
+.ourcategories ul li a:hover, .categoryandlink ul li a:hover{
+    text-decoration: underline;
+}
+
 .copyright{
     border-top: 2px solid #0B3C2F;
     padding-top: 2rem;

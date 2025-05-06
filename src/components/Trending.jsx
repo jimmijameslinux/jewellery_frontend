@@ -132,7 +132,7 @@ const Trending = () => {
                     <img src={logobig} alt="logobig" />
                     <p>Crafting Purity, Celebrating Prosperity</p>
                 </div>
-                <hr />
+                <hr className='promisehr' />
                 <div className="promises">
                     <h4>
                         <span className='span1'>

@@ -188,7 +188,7 @@ h3 {
     width: 13vw;
 }
 
-.jewelimgpromises{
+.jewelimgpromises {
     display: flex;
     /* flex-wrap: wrap; */
     justify-content: space-around;
@@ -196,12 +196,13 @@ h3 {
     padding: 2rem;
 }
 
-.promises{
+.promises {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
-.littlepromises{
+.littlepromises {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -210,7 +211,7 @@ h3 {
     row-gap: 2rem;
 }
 
-.littlepromises .prom{
+.littlepromises .prom {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,19 +219,19 @@ h3 {
     row-gap: 1rem;
 }
 
-.jewelimg{
+.jewelimg {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 49%;
 }
 
-.jewelimg img{
+.jewelimg img {
     width: 40%;
 }
 
-.jewelimg p{
+.jewelimg p {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     /* 28px = 1.75rem */
@@ -239,7 +240,7 @@ h3 {
     text-align: center;
 }
 
-h4{
+h4 {
     font-weight: 400;
     font-size: 2.5rem;
     /* letter-spacing: 14%; */
@@ -250,17 +251,21 @@ h4{
     column-gap: 1rem;
 }
 
-.span1{
+.span1 {
     font-family: 'Playfair Display', serif;
 }
 
-.span2{
-    font-family:Georgia, 'Times New Roman', Times, serif;
+.span2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     /* text color linear gradient */
     background: linear-gradient(to right, #D9B47F, #B6813B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+}
+
+.promisehr{
+    height: 25rem;
 }
 
 /* ////////////////////////////////////////////////////////////// */
@@ -278,11 +283,19 @@ h4{
     .price {
         column-gap: 1rem;
     }
-    
-.jewelimgpromises{
-    flex-wrap: wrap;
-}
-    
+
+    .jewelimgpromises {
+        flex-wrap: wrap;
+    }
+
+    .promisehr{
+        display: none;
+    }
+
+    .promises{
+        width: fit-content;
+    }
+
 }
 
 /* Tablet: slightly reduce font sizes for balance */
@@ -325,8 +338,16 @@ h4{
         row-gap: 1rem;
     }
 
-    .jewelimgpromises{
+    .jewelimgpromises {
         flex-wrap: wrap;
+    }
+
+    .promisehr{
+        display: none;
+    }
+
+    .promises{
+        width: fit-content;
     }
 }
 

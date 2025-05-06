@@ -4,6 +4,7 @@ import logo from '../assets/footerlogo.png'
 import location from '../assets/location.png'
 import email from '../assets/email.png'
 import phone from '../assets/phone.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -30,21 +31,21 @@ const Footer = () => {
                     <div className="ourcategories">
                         <h3>Our Categories</h3>
                         <ul>
-                            <li>Home</li>
-                            <li>About Us</li>
-                            <li>Services</li>
-                            <li>Contact Us</li>
-                            <li>Privacy Policy</li>
+                            <li><Link to="/rings">Rings</Link></li>
+                            <li><Link to="/necklaces">Necklaces</Link></li>
+                            <li><Link to="/earrings">Earrings</Link></li>
+                            <li><Link to="/bracelets">Bracelets</Link></li>
+                            <li><Link to="/anklets">Anklets</Link></li>
                         </ul>
                     </div>
                     <div className="usefulinks">
                         <h3>Useful Links</h3>
                         <ul>
-                            <li>Terms of Use</li>
-                            <li>Privacy Policy</li>
-                            <li>Refund Policy</li>
-                            <li>Shipping Policy</li>
-                            <li>Cancellation Policy</li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About Us</Link></li>
+                            <li><Link to="/ourcollection">Our Collection</Link></li>
+                            <li><Link to="/gallery">Gallery</Link></li>
+                            <li><Link to="/contact">Contact Us</Link></li>
                         </ul>
                     </div>
                 </div>
