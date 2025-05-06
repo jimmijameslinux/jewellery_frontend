@@ -15,7 +15,17 @@
     row-gap: 2rem;
     /* flex-wrap: wrap; */
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 18rem;
+    position: relative;
+}
+
+.footerart{
+    position: absolute;
+    top: -13.5rem;
+    left: 35%;
+    width: 30vw;
+    height: 30vh;
+    z-index: -1;
 }
 
 .footerleftcontent {
@@ -161,4 +171,21 @@
     .categoryandlink h3{
         width: 100%;
     } */
+    .footerleftcontent {
+        width: fit-content;
+    }
+}
+
+
+/* .footerleftcontent width fitcontent */
+@media (max-width: 768px) {
+    .footerleftcontent {
+        width: fit-content;
+    }
+
+    .footerart{
+    top: -9rem;
+        width: 20vw;
+        height: 20vh;
+    }
 }

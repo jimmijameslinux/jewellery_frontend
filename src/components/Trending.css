@@ -170,6 +170,14 @@ h3 {
     font-weight: 400;
     cursor: pointer;
     font-family: 'Playfair', serif;
+    transition: all 0.1s ease-in-out;
+
+}
+
+.addtocartbtn:hover {
+    background-color: #0B3C2F;
+    color: #F6F1EB;
+    scale: 1.05;
 }
 
 .trendinghorimg {
@@ -243,6 +251,15 @@ h3 {
 .littlepromises .prom img {
     width: 64px;
     height: 64px;
+}
+
+.littlepromises p{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    /* 28px = 1.75rem */
+    font-size: 1rem;
+    letter-spacing: 6%;
+    text-align: center;
 }
 
 .jewelimg {

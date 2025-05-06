@@ -5,10 +5,12 @@ import location from '../assets/location.png'
 import email from '../assets/email.png'
 import phone from '../assets/phone.png'
 import { Link } from 'react-router-dom'
+import footerart from '../assets/footerart.png'
 
 const Footer = () => {
     return (
         <div className='footer'>
+            <img className='footerart' src={footerart} alt="" />
             <div className="footerleftcontent">
                 <img src={logo} alt="logo" />
                 <div className="address">
