@@ -204,9 +204,18 @@ h3 {
 .littlepromises{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     column-gap: 5rem;
     flex-wrap: wrap;
+    row-gap: 2rem;
+}
+
+.littlepromises .prom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
 }
 
 .jewelimg{

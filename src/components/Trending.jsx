@@ -2,9 +2,15 @@ import React from 'react'
 import lineart from '../assets/lineart.png'
 import '../components/Trending.css'
 import radiantjewellery from '../assets/radiantjewellery.png'
+import blossomjewellery from '../assets/blossomjewellery.png'
+import classicjewellery from '../assets/classicjewellery.png'
+import diamondjewellery from '../assets/diamondjewellery.png'
 import indianarttraditional from '../assets/indianarttraditional.png'
 import logobig from '../assets/logobig.png'
 import certificate from '../assets/certificate.png'
+import promisejewellery from '../assets/promisejewellery.png'
+import rupee from '../assets/rupee.png'
+import invest from '../assets/invest.png'
 
 const Trending = () => {
     return (
@@ -49,10 +55,10 @@ const Trending = () => {
                     {/* 2 */}
                     <div className="trendingitem">
                         <div className="itemimage">
-                            <img src={radiantjewellery} alt="radiantjewellery" />
+                            <img src={blossomjewellery} alt="blossomjewellery" />
                         </div>
-                        <h3 className="itemtitle">Radiant Halo Studs</h3>
-                        <p className="itemdescription">Where brilliance meets elegance.</p>
+                        <h3 className="itemtitle">Golden Blossom Earrings</h3>
+                        <p className="itemdescription">A floral touch of timeless beauty</p>
                         <div className="ratingwithstars">
                             {/* <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZpcnN0JTIwY29sb3J8ZW58MHx8fHwxNjg5NTQ1MjA5&ixlib=rb-4.0.3&q=80&w=400" alt="Item" className="reatimg" /> */}
                             <div className="stars">⭐⭐⭐⭐⭐</div>
@@ -70,10 +76,10 @@ const Trending = () => {
                     {/* 3 */}
                     <div className="trendingitem">
                         <div className="itemimage">
-                            <img src={radiantjewellery} alt="radiantjewellery" />
+                            <img src={classicjewellery} alt="classicjewellery" />
                         </div>
-                        <h3 className="itemtitle">Radiant Halo Studs</h3>
-                        <p className="itemdescription">Where brilliance meets elegance.</p>
+                        <h3 className="itemtitle">Classic Cluster Studs</h3>
+                        <p className="itemdescription">Everyday sparkle with a refined twist.</p>
                         <div className="ratingwithstars">
                             {/* <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZpcnN0JTIwY29sb3J8ZW58MHx8fHwxNjg5NTQ1MjA5&ixlib=rb-4.0.3&q=80&w=400" alt="Item" className="reatimg" /> */}
                             <div className="stars">⭐⭐⭐⭐⭐</div>
@@ -91,10 +97,10 @@ const Trending = () => {
                     {/* 4 */}
                     <div className="trendingitem">
                         <div className="itemimage">
-                            <img src={radiantjewellery} alt="radiantjewellery" />
+                            <img src={diamondjewellery} alt="diamondjewellery" />
                         </div>
-                        <h3 className="itemtitle">Radiant Halo Studs</h3>
-                        <p className="itemdescription">Where brilliance meets elegance.</p>
+                        <h3 className="itemtitle">Diamond Glimmer Duos</h3>
+                        <p className="itemdescription">Tiny treasures, bold brilliance.</p>
                         <div className="ratingwithstars">
                             {/* <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZpcnN0JTIwY29sb3J8ZW58MHx8fHwxNjg5NTQ1MjA5&ixlib=rb-4.0.3&q=80&w=400" alt="Item" className="reatimg" /> */}
                             <div className="stars">⭐⭐⭐⭐⭐</div>
@@ -143,17 +149,17 @@ const Trending = () => {
                         </div>
 
                         <div className="prom">
-                            <img src={certificate} alt="certificate" />
-                            <p>The Purity Gurantee</p>
+                            <img src={promisejewellery} alt="promisejewellery" />
+                            <p>Every Piece is Brand New</p>
                         </div>
 
                         <div className="prom">
-                            <img src={certificate} alt="certificate" />
-                            <p>The Purity Gurantee</p>
+                            <img src={rupee} alt="rupee" />
+                            <p>Transparency in Billing</p>
                         </div>
 
                         <div className="prom">
-                            <img src={certificate} alt="certificate" />
+                            <img src={invest} alt="invest" />
                             <p>The Purity Gurantee</p>
                         </div>
                     </div>
