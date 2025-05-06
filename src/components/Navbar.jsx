@@ -1,10 +1,12 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import '../components/Navbar.css'
 
 const Navbar = ({ isOpen }) => {
+  const location = useLocation()
+  const isCartPage = location.pathname !== '/'
   return (
-    <nav className={`navbar ${isOpen ? 'open' : ''}`}>
+    <nav className={`${isOpen ? 'open' : ''}  ${isCartPage ? 'navbarnone' : 'navbar'}`}>
       <ul className="nav-menu">
         <li>
           <NavLink to="/" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>

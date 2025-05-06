@@ -19,6 +19,10 @@
     position: relative;
 }
 
+.footernone {
+    display: none;
+}
+
 .footerart{
     position: absolute;
     top: -13.5rem;

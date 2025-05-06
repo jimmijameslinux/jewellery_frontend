@@ -5,14 +5,21 @@
   position: relative;
   top: -2rem;
   /* padding: 1rem 2rem; */
-  background-color: transparent; /* optional */
+  background-color: transparent;
+  /* optional */
   z-index: 10;
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
+}
+
+.navbarnone{
+  display: none;
+}
+
+
 
 .nav-menu {
   display: flex;
@@ -49,8 +56,10 @@
 }
 
 .nav-links.active {
-  border-bottom: 2px solid #a87c4f; /* Gold-ish underline */
-  text-shadow: 1px 1px 2px rgba(168, 124, 79, 0.6); /* Optional glow */
+  border-bottom: 2px solid #a87c4f;
+  /* Gold-ish underline */
+  text-shadow: 1px 1px 2px rgba(168, 124, 79, 0.6);
+  /* Optional glow */
 }
 
 /* navbar animations */
@@ -76,9 +85,12 @@
   padding: 0;
   margin: 0;
   animation: fadeSlideIn 2s ease forwards;
-  animation-delay: 1s; /* Delay for the menu items to appear */
-  opacity: 0; /* Start hidden */
-  transform: translateY(-20px); /* Start slightly above */
+  animation-delay: 1s;
+  /* Delay for the menu items to appear */
+  opacity: 0;
+  /* Start hidden */
+  transform: translateY(-20px);
+  /* Start slightly above */
 }
 
 @keyframes fadeSlideIn {
@@ -86,6 +98,7 @@
     opacity: 0;
     /* transform: translateY(-30px); */
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -95,10 +108,12 @@
 
 /* Responsive layout for small screens */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 0;
-        background-color: #0B3C2F; /* optional */
-    }
+  .navbar {
+    padding: 0;
+    background-color: #0B3C2F;
+    /* optional */
+  }
+
   .nav-menu {
     flex-direction: column;
     gap: 1.5rem;

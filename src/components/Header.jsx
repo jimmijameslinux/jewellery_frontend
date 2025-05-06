@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
 import circularart from '../assets/circularart.png'
 import circularart2 from '../assets/circularart2.png'
@@ -6,16 +7,18 @@ import lineart from '../assets/lineart.png'
 import logo from '../assets/logo.png'
 import '../components/Header.css'
 
+
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false)
-
+    const location = useLocation()
+    const isCartPage = location.pathname !== '/'
     const toggleMenu = () => {
         setMenuOpen(!menuOpen)
     }
 
     return (
         <>
-            <div className="header">
+            <div className={`${isCartPage ? 'headernone' : 'header'}`}>
                 <div className="side-art">
                     <img src={circularart} alt="Art Left" className="responsive-img tall" />
                 </div>
@@ -32,12 +35,12 @@ const Header = () => {
 
                 {/* Hamburger icon */}
                 <div className="hamburger" onClick={toggleMenu}>
-                {
-                    menuOpen?
-                        <span>X</span>
-                        :
-                        <span>☰</span>
-                        }
+                    {
+                        menuOpen ?
+                            <span>X</span>
+                            :
+                            <span>☰</span>
+                    }
                 </div>
             </div>
 

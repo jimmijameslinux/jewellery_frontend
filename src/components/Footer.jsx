@@ -1,21 +1,23 @@
 import React from 'react'
 import '../components/Footer.css'
 import logo from '../assets/footerlogo.png'
-import location from '../assets/location.png'
+import locationi from '../assets/location.png'
 import email from '../assets/email.png'
 import phone from '../assets/phone.png'
-import { Link } from 'react-router-dom'
+import { Link,useLocation } from 'react-router-dom'
 import footerart from '../assets/footerart.png'
 
 const Footer = () => {
+    const location = useLocation()
+    const isCartPage = location.pathname !== '/' // Check if the current path is "/cart"
     return (
-        <div className='footer'>
+        <div className={`${isCartPage ? 'footernone' : 'footer'}`}>
             <img className='footerart' src={footerart} alt="" />
             <div className="footerleftcontent">
                 <img src={logo} alt="logo" />
                 <div className="address">
                     <div className="location">
-                        <img src={location} alt="location" className="icon" />
+                        <img src={locationi} alt="location" className="icon" />
                         <p>In Front of Sunahari Maszid, Near Indian Bank, kachehari Road, Lakhimpur Kheri</p>
                     </div>
                     <div className="email">
