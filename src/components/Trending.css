@@ -18,6 +18,7 @@ h3 {
     margin-top: 10rem;
     row-gap: 2rem;
     position: relative;
+    padding: 3rem;
 }
 
 .tri {
@@ -90,6 +91,7 @@ h3 {
     position: relative;
     row-gap: 2rem;
     width: 100%;
+    margin-top: 5rem;
 }
 
 .trendingitem {
