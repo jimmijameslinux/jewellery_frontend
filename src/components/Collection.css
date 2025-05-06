@@ -95,7 +95,7 @@ box-shadow: 0px 0px 250px 0px #00FFB3;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     align-items: center;
-    width: 70%;         /* or 100%, or a max-width value */
+    width: 55%;         /* or 100%, or a max-width value */
     max-width: 1200px;  /* adjust as needed */
     margin: 0 auto;     /* center the container */
     margin-bottom: 1rem;
@@ -140,14 +140,14 @@ box-shadow: 0px 0px 250px 0px #00FFB3;
     /* background: linear-gradient(90deg, #FFC05C 0%, #997337 100%);
  */
     font-family: 'SimSun', sans-serif;  
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 400;
   }
 
   .right .top p{
     background-image: linear-gradient(to right, #CE966F, #DAB09D);
     font-family: 'Cinzel Decorative', cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 400;
   }
 
