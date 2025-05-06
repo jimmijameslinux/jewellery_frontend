@@ -103,22 +103,19 @@ h1,p{
     line-height: 100%;
     font-weight: 400;
     cursor: pointer;
+    z-index: 0;
     /* border-radius: 0; */
 }
 
 .btn2{
-    background-color: transparent;
+    background-color: #0B3C2F;
     color: #F6F1EB;
 }
 
-.btn1:hover{
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.btn2:hover{
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
+.btn1:hover,.btn2:hover{
+   scale: 1.2;
+   z-index: 1;
+    transition: all 0.2s ease-in-out;
 }
 
 /* .jewellerywomen{

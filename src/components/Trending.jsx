@@ -25,6 +25,8 @@ const Trending = () => {
                     fill="#F6F1EB"/>
             </svg> */}
 
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 2000 2000"><g><g fill="hsl(0, 0%, 100%)" id="star"><path d="M 356.8435745013621 995.8100590440629 C 1000 1000 1000 1000 1014.6647460394051 143.85476162437828 C 1000 1000 1000 1000 1538.4078214752444 1000.6983208218242 C 1000 1000 1000 1000 999.3016791781756 1004.1899409559371 C 1000 1000 1000 1000 356.8435745013621 995.8100590440629" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg>
+
                 <div className="trending">
                     <img src={lineart} alt="Line Art" className="responsive-img line" />
                     <h1>TRENDING</h1>
