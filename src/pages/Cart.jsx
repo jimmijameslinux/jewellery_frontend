@@ -7,31 +7,29 @@ import cartflowerart from '../assets/cartflowerart.png';
 import downarrow from '../assets/downarrow.png';
 import logo from '../assets/logo.png';
 import Loading from '../components/Loading';
-// import cartitemremove from '../assets/cartitemremove.png';
 
 const Cart = () => {
-
     const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
-
-    // Wait for window to load completely (images, stylesheets, etc.)
-    if (document.readyState === 'complete') {
-      setLoading(false);
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, []);
-
-  if (loading) return <Loading />;
     const [cartItems, setCartItems] = useState([]);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 1000);
+
+        const handleLoad = () => {
+            clearTimeout(timer);
+            setLoading(false);
+        };
+
+        if (document.readyState === 'complete') {
+            setLoading(false);
+        } else {
+            window.addEventListener('load', handleLoad);
+        }
+
+        return () => {
+            window.removeEventListener('load', handleLoad);
+        };
+    }, []);
 
     useEffect(() => {
         const storedCart = localStorage.getItem('cart');
@@ -44,10 +42,6 @@ const Cart = () => {
             }
         }
     }, []);
-
-    // useEffect(() => {
-    //     localStorage.setItem('cart', JSON.stringify(cartItems));
-    // }, [cartItems]);
 
     const removeItem = (id) => {
         const updatedCart = cartItems.filter((item) => item.id !== id);
@@ -73,21 +67,21 @@ const Cart = () => {
         localStorage.setItem('cart', JSON.stringify(updatedCart));
     };
 
-    // 🧮 Calculate totals
     const totalItems = cartItems.reduce((sum, item) => sum + (item.quantity || 1), 0);
     const totalAmount = cartItems.reduce((sum, item) => {
         const price = parseFloat(item.price.replace(/[^0-9.]/g, '')) || 0;
         return sum + price * (item.quantity || 1);
     }, 0);
 
-    const discount = 0; // Assuming no discount for now
-    const deliveryCharges = 5; // Assuming free delivery for now
-    const taxes = 0; // Assuming no taxes for now
-
+    const discount = 0;
+    const deliveryCharges = 5;
+    const taxes = 0;
     const finalAmount = totalAmount - discount + deliveryCharges + taxes;
 
+    if (loading) return <Loading />;
+
     return (
-        <div style={{position: "relative",height:"fit-content"}}>
+        <div style={{ position: "relative", height: "fit-content" }}>
             <div className="cart-container">
                 <div className="cartitem">
                     <div className="cartitem-top">
@@ -97,55 +91,42 @@ const Cart = () => {
                         </div>
                         <div className="contents">
                             <h2 className="heading">CART</h2>
-                            <p className="text">Love shopping?
-                                <br />
-                                We can tell.</p>
+                            <p className="text">Love shopping?<br />We can tell.</p>
                         </div>
                     </div>
                     <div className="cartitem-bottom">
                         <p className="cartheading">Items in cart</p>
                         <div className="carditems">
                             {cartItems.length > 0 ? (
-                                <>
-                                    {cartItems.map
-                                        ((item) =>
-                                        (
-                                            <div key={item.id} className="carditem">
-                                                <button className="remove-btn" onClick={() => removeItem(item.id)}>
-                                                </button>
-                                                <div className="cartitemimg">
-                                                    <img src={item.img} alt={item.title} className="cart-item-img" />
-                                                </div>
-                                                <div className="carditemright">
-                                                    <p className="cardtitle">{item.title}</p>
-                                                    <p className="carddesc">{item.desc}</p>
-                                                    <div className="priceandquantity">
-                                                        <p className="cardprice">₹{item.price}</p>
-                                                        QTY:
-                                                        <div className="quantitycontrols">
-                                                            <button
-                                                                onClick={() => decreaseQuantity(item.id)}
-                                                                disabled={(item.quantity || 1) <= 1}
-                                                            >
-                                                                -
-                                                            </button>
-                                                            <span>{item.quantity || 1}</span>
-                                                            <button onClick={() => increaseQuantity(item.id)}>+</button>
-                                                        </div>
-                                                    </div>
+                                cartItems.map((item) => (
+                                    <div key={item.id} className="carditem">
+                                        <button className="remove-btn" onClick={() => removeItem(item.id)}></button>
+                                        <div className="cartitemimg">
+                                            <img src={item.img} alt={item.title} className="cart-item-img" />
+                                        </div>
+                                        <div className="carditemright">
+                                            <p className="cardtitle">{item.title}</p>
+                                            <p className="carddesc">{item.desc}</p>
+                                            <div className="priceandquantity">
+                                                <p className="cardprice">₹{item.price}</p>
+                                                QTY:
+                                                <div className="quantitycontrols">
+                                                    <button
+                                                        onClick={() => decreaseQuantity(item.id)}
+                                                        disabled={(item.quantity || 1) <= 1}
+                                                    >
+                                                        -
+                                                    </button>
+                                                    <span>{item.quantity || 1}</span>
+                                                    <button onClick={() => increaseQuantity(item.id)}>+</button>
                                                 </div>
                                             </div>
-                                        ))
-
-                                    }
-                                </>
-
-                            ) :
-                                (
-                                    <p className="emptycart">Your cart is empty.</p>
-                                )
-                            }
-
+                                        </div>
+                                    </div>
+                                ))
+                            ) : (
+                                <p className="emptycart">Your cart is empty.</p>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -154,7 +135,6 @@ const Cart = () => {
                     <img src={cartflowerart} alt="cartflowerart" />
                     <h3 className="title">Order Summary</h3>
                     <div className="promocode">
-                        {/* select box */}
                         Apply Coupon code / Promo Code
                         <img src={downarrow} alt="" />
                     </div>
@@ -170,7 +150,7 @@ const Cart = () => {
                             <div className="amtvalues">
                                 <p>₹{totalAmount.toFixed(2)}</p>
                                 <p>₹{discount.toFixed(2)}</p>
-                                <p>{deliveryCharges == 0 ? "Free" : deliveryCharges}</p>
+                                <p>{deliveryCharges === 0 ? "Free" : `₹${deliveryCharges}`}</p>
                                 <p>₹{taxes.toFixed(2)}</p>
                             </div>
                         </div>
@@ -181,16 +161,14 @@ const Cart = () => {
                     </div>
                 </div>
                 <img src={cartquadart} alt="Cart" className="cart-image" />
-
             </div>
+
             <div className="checkout">
-                <span>Total({totalItems} items):₹{finalAmount}</span>
+                <span>Total({totalItems} items): ₹{finalAmount.toFixed(2)}</span>
                 <button>Proceed to Checkout</button>
             </div>
         </div>
     );
-
-
 };
 
 export default Cart;
