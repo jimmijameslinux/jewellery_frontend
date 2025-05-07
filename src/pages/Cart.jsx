@@ -6,9 +6,30 @@ import lower_jewellery from '../assets/lower_jewellery.png';
 import cartflowerart from '../assets/cartflowerart.png';
 import downarrow from '../assets/downarrow.png';
 import logo from '../assets/logo.png';
-import cartitemremove from '../assets/cartitemremove.png';
+// import cartitemremove from '../assets/cartitemremove.png';
 
 const Cart = () => {
+
+    const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
+
+    // Wait for window to load completely (images, stylesheets, etc.)
+    if (document.readyState === 'complete') {
+      setLoading(false);
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
+  if (loading) return <Loading />;
     const [cartItems, setCartItems] = useState([]);
 
     useEffect(() => {
