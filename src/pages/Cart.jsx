@@ -6,6 +6,7 @@ import lower_jewellery from '../assets/lower_jewellery.png';
 import cartflowerart from '../assets/cartflowerart.png';
 import downarrow from '../assets/downarrow.png';
 import logo from '../assets/logo.png';
+import Loading from '../components/Loading';
 // import cartitemremove from '../assets/cartitemremove.png';
 
 const Cart = () => {
