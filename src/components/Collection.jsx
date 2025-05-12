@@ -19,6 +19,7 @@ const Collection = () => {
                 initial="hidden"
                 animate="visible"
                 variants={fadeInUp}
+                id='collectionentry'
             >
                 <hr />
                 <div className="collectiontextlogo">

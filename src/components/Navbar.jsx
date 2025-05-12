@@ -14,24 +14,32 @@ const Navbar = ({ isOpen }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
+          {/* <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
             ABOUT US
-          </NavLink>
+          </NavLink> */}
+          {/* use a tag */}
+          <a href="#trendinghorimg" className="nav-links">ABOUT US</a>
         </li>
         <li>
-          <NavLink to="/ourcollection" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
+          {/* <NavLink to="#collectionentry" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
             OUR COLLECTION
-          </NavLink>
+          </NavLink> */}
+          {/* use a tag */}
+          <a href="#collectionentry" className="nav-links">OUR COLLECTION</a>
         </li>
         <li>
-          <NavLink to="/gallery" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
+          {/* <NavLink to="/gallery" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
             GALLERY
-          </NavLink>
+          </NavLink> */}
+          {/* use a tag */}
+          <a href="#trending" className="nav-links">GALLERY</a>
         </li>
         <li>
-          <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
+          {/* <NavLink to="#footer" className={({ isActive }) => isActive ? 'nav-links active' : 'nav-links'}>
             CONTACT US
-          </NavLink>
+          </NavLink> */}
+          {/* use a tag */}
+          <a href="#footer" className="nav-links">CONTACT US</a>
         </li>
       </ul>
     </nav>

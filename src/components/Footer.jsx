@@ -11,7 +11,7 @@ const Footer = () => {
     const location = useLocation()
     const isCartPage = location.pathname !== '/' // Check if the current path is "/cart"
     return (
-        <div className={`${isCartPage ? 'footernone' : 'footer'}`}>
+        <div className={`${isCartPage ? 'footernone' : 'footer'}`} id='footer'>
             <img className='footerart' src={footerart} alt="" />
             <div className="footerleftcontent">
                 <img src={logo} alt="logo" />
@@ -54,7 +54,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="copyright">
-                    <p>Copyright © 2025 Saubhagya Jewels | Design & Promoted By - Keyword India Network pvt. Ltd.</p>
+                    <p>Copyright © 2025 Saubhagya Jewels</p>
                 </div>
             </div>
         </div>

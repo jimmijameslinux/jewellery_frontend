@@ -86,6 +86,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 50%;
     /* position: relative;
     width: 79%; */
 }
@@ -132,6 +133,7 @@
 .copyright{
     border-top: 2px solid #0B3C2F;
     padding-top: 2rem;
+    width: 100%;
 }
 
 .copyright p{

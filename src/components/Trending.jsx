@@ -104,8 +104,8 @@ const Trending = () => {
 
     return (
         <>
-            <div className="trendingtop">
-                <div className="trending">
+            <div className="trendingtop" id='trendingtop'>
+                <div className="trending" id='trending'>
                     <svg className="tri" width="300" height="300" viewBox="0 -80 300 300" xmlns="http://www.w3.org/2000/svg">
                         <path d="M 10 190 Q 100 140 150 -60 Q 200 140 290 190 Z" fill="#F6F1EB" />
                     </svg>
@@ -143,14 +143,14 @@ const Trending = () => {
                     ))}
                 </div>
             </div>
-            <div className="trendinghorimg">
-                <hr className="trendinghor" />
+            <div className="trendinghorimg" id='trendinghorimg'>
+                <hr className="trendinghor"/>
                 <div className="artcombined">
                     <img className="indianarttraditional" src={indianarttraditional} alt="indianarttraditionalimg" />
                     <img className="indianarttraditional2" src={indianarttraditional} alt="indianarttraditionalimg2" />
                 </div>
             </div>
-            <div className="jewelimgpromises">
+            <div className="jewelimgpromises" id='jewelimgpromises'>
                 <div className="jewelimg">
                     <img src={logobig} alt="logobig" />
                     <p>Crafting Purity, Celebrating Prosperity</p>
