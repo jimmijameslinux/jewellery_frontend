@@ -246,7 +246,17 @@
     align-items: center;
     row-gap: 1rem;
     width: 80%;
+    /* transition: all 0.3s ease; */
 }
+
+
+.fixedsummary {
+  position: fixed;
+  top: 0rem;
+  width: 30%;
+  padding:2rem;
+}
+
 
 .ordersummary img {
     width: 30%;
@@ -335,7 +345,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     row-gap: 1rem;
 }
@@ -345,6 +355,7 @@
     /* top: -0.5rem;
     right: 5rem; */
     width: 80%;
+    margin-bottom: 2rem;
     /* height: 15%; */
 }
 

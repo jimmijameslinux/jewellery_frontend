@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Cart.css';
 import cartquadart from '../assets/cartquadart.png';
 import upper_jewellery from '../assets/upper_jewellery.png';
@@ -78,10 +78,43 @@ const Cart = () => {
     const taxes = 0;
     const finalAmount = totalAmount - discount + deliveryCharges + taxes;
 
+    const summaryRef = useRef(null);
+    const carditemRef = useRef(null)
+    const [isFixed, setIsFixed] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const summaryElement = document.querySelector('.ordersummary');
+            const carditemElement = document.querySelector('.carditems');
+            if (summaryElement) {
+                const summaryTop = summaryElement.getBoundingClientRect().top;
+                const carditemTop = carditemElement.getBoundingClientRect().top;
+                console.log('Summary Top:', summaryTop); // Log for debugging
+                console.log('Card Item Top:', carditemTop); // Log for debugging
+                if (summaryTop <= 0 && carditemTop <= 0) {
+                    setIsFixed(true);
+                } else {
+                    setIsFixed(false);
+                }
+
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
+
+
+
     if (loading) return <Loading />;
 
     return (
-        <div style={{ position: "relative", height: "fit-content" }}>
+        <div style={{ position: "relative", height: "fit-content" }} >
             <div className="cart-container">
                 <div className="cartitem">
                     <div className="cartitem-top">
@@ -96,7 +129,7 @@ const Cart = () => {
                     </div>
                     <div className="cartitem-bottom">
                         <p className="cartheading">Items in cart</p>
-                        <div className="carditems">
+                        <div className="carditems" ref={carditemRef}>
                             {cartItems.length > 0 ? (
                                 cartItems.map((item) => (
                                     <div key={item.id} className="carditem">
@@ -138,7 +171,7 @@ const Cart = () => {
                         Apply Coupon code / Promo Code
                         <img src={downarrow} alt="" />
                     </div>
-                    <div className="ordersummary">
+                    <div ref={summaryRef} className={`ordersummary ${isFixed ? 'fixedsummary' : ''}`} >
                         <img src={logo} alt="" />
                         <div className="amounts">
                             <div className="amtnames">
