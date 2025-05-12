@@ -12,7 +12,7 @@
 
 .cart-container {
     position: relative;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     padding-bottom: 8rem;
     /* flex-wrap: wrap; */
