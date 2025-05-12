@@ -251,10 +251,7 @@
 
 
 .fixedsummary {
-  position: fixed;
-  top: 0rem;
-  width: 30%;
-  padding:2rem;
+  
 }
 
 
@@ -377,4 +374,14 @@
     .cartsummary{
         align-items: center;
     }
+}
+
+/* if max-width is greater than mobile size then */
+@media (min-width: 1024px) {
+      .fixedsummary {
+  position: fixed;
+  top: 0rem;
+  width: 30%;
+  padding:2rem;
+}
 }
